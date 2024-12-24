@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đăng nhập & Đăng ký </title>
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/b041ca492a.js" crossorigin="anonymous"></script>
+</head>
+
+<body> 
+    <nav>
+      <input class="checkbox" type="checkbox" />
+      <img src="img/navigation/menu.png" alt="" />
+      <ul class="menu-items">
+        <li class="logo-home">
+          <a href="index.html">
+            <h2>
+              ALL DAY COFFEE
+            </h2>
+          </a>
+        </li>
+  
+        <li><a href="drink.html">
+            Sản phẩm đồ uống </a>
+        </li>
+        <li><a href="food.html">
+          Sản phẩm đồ ăn </a>
+        </li>
+        <li><a href="beans.html">
+            Hạt cà phê đặc sản </a>
+        </li>
+        <li><a href="merchandise.html">
+            Sản phẩm lưu niệm </a>
+        </li>
+        <li><a href="login.html">
+          Đăng nhập & Đăng ký</a>
+        </li>
+  
+      </ul>
+      <div class="logo">
+        <a href="index.html">
+            <h3>ALL DAY COFFEE</h3>
+        </a>
+      </div>
+      <button class="shopping-cart">
+        <img src="img/navigation/shopping-cart.png" alt="" />
+      </button>
+    </nav>
+
+    <div class="container">
+        <input type="checkbox" id="check">
+        <div class="login form">
+            <header>Đăng nhập</header>
+            <form action="#">
+                <input type="text" placeholder="Nhập email của bạn">
+                <input type="password" placeholder="Nhập mật khẩu">
+                <a href="#">Quên mật khẩu?</a>
+                <input type="button" class="button" value="Đăng nhập" onclick="successHandler()">
+            </form>
+            <div class="signup">
+                <span class="signup">Không có tài khoản?
+                    <label for="check" onclick='handleCheck()'>Đăng ký</label>
+                </span>
+            </div>
+        </div>
+        <div class="registration form">
+            <header>Đăng ký</header>
+            <form action="#">
+                <input type="text" placeholder="Nhập email của bạn">
+                <input type="password" placeholder="Tạo mật khẩu">
+                <input type="password" placeholder="Nhập lại mật khẩu">
+                <input type="button" class="button" value="Đăng ký" onclick="successHandler()">
+            </form>
+            <div class="signup">
+                <span class="signup">Đã có tài khoản
+                    <label for="check" onclick='handleCheck()'>Đăng nhập</label>
+                </span>
+            </div>
+        </div>
+        <div class="login-success">
+            <div class="card">
+                <div
+                    style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;display: flex;align-items: center;">
+                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                    </svg>
+                </div>
+                <!-- <h1>Success</h1>
+                <p>We received your purchase request;<br /> we'll be in touch shortly!</p> -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="info" 0>
+          <h4>Thông Tin</h4>
+          <div><i class="fas fa-map-marker-alt"></i><span class="info-text">Cơ sở 1: 37 Quang Trung</span></div>
+          <div><i class="fas fa-map-marker-alt"></i><span class="info-text">Cơ sở 2: 55 Hàng Bún</span></div>
+          <div><i class="fas fa-phone"></i><span class="info-text">Hotline: 097 190 8080</span></div>
+          <div><i class="far fa-envelope"></i><span class="info-text">Email: alldaycoffeevn@gmail.com</span></div>
+          <div><i class="fab fa-facebook"></i><span class="info-text">Facebook: www.fb.com/alldaycoffeevn</span></div>
+        </div>
+        <div class="policy">
+          <h4>Chính Sách</h4>
+          <div>Chính sách đổi trả hàng</div>
+          <div>Chính sách bảo hành</div>
+          <div>Hướng dẫn mua hàng</div>
+          <div>Chính sách đại lý</div>
+        </div>
+        <div class="fanpage">
+          <h4 style="padding-bottom: 15px;">
+            Fanpage
+          </h4>
+          <iframe
+            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Falldaycoffeevn&tabs=timeline&width=340&height=331&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+            ></iframe>
+        </div>
+      </footer>
+    
+      <!-- JS -->
+      <script src="../../js/main.js"></script>
+    </body>
+    </html>
