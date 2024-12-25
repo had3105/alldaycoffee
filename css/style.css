@@ -80,9 +80,6 @@ nav .shopping-cart {
   background-color: #fff;
   border: none;
 }
-.news {
-  display: none;
-}
 .banner {
   padding: 64px 10px 15px;
   position: relative;
@@ -92,6 +89,16 @@ nav .shopping-cart {
 .banner img {
   width: 150%;
   border-radius: 2%;
+}
+.news {
+  padding: 12px 10px 15px;
+  position: relative;
+  z-index: 1; 
+}
+.news img {
+  width: 150%;
+  border-radius: 1px;
+  border: 3px solid white;
 }
 .banner-info ul {
   display: flex;
@@ -129,7 +136,11 @@ nav .shopping-cart {
   text-transform: uppercase;
 }
 .new-products,
-.hot-products {
+.hot-products, 
+.drink-products,
+.food-products,
+.beans-products,
+.merchandise-products {
   margin: 0 15px;
   display: flex;
   flex-wrap: wrap;
@@ -137,19 +148,6 @@ nav .shopping-cart {
   align-items: center;
   border-radius: 5px;
   padding: 15px 0;
-}
-ul.drink-products, ul.food-products, ul.beans.products, ul.merchandise-products {
-  display: flex;
-  flex-wrap: wrap; /* Cho phép các sản phẩm xuống dòng */
-  gap: 20px; /* Khoảng cách giữa các sản phẩm */
-  justify-content: flex-start; /* Căn trái các sản phẩm */
-  margin-bottom: 2%;
-}
-
-.product {
-  flex: 1 1 calc(20% - 20px); /* Hiển thị tối đa 4 sản phẩm trên mỗi dòng */
-  max-width: calc(20% - 20px); /* Giới hạn chiều rộng */
-  box-sizing: border-box; /* Đảm bảo padding không ảnh hưởng kích thước */
 }
 .new-products li:hover,
 .hot-products li:hover,
@@ -160,7 +158,7 @@ ul.drink-products, ul.food-products, ul.beans.products, ul.merchandise-products 
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   cursor: pointer !important;
 }
-.new-product {
+.new-product{
   width: calc(50% - 4px);
   height: 250px;
   border-radius: 5px;
@@ -751,6 +749,9 @@ footer {
     padding: 20px;
     background-color: #fff;
   }
+  .nav-line{
+    width: auto;
+  }
   nav img {
     width: 35px;
     height: 35px;
@@ -769,14 +770,25 @@ footer {
     height: auto;
     border-radius: 5px;
   }
-  .new-product {
-    width: calc(25% - 4px);
-    height: 300px;
-    border-radius: 5px;
-    padding: 15px;
-    background-color: #fff;
-    margin: 2px;
-    list-style: none;
+
+  .banner {
+    padding: 64px 10px 15px;
+    position: relative;
+    z-index: 1;
+  }
+  .banner img {
+    width: 100%;
+    border-radius: 2%;
+  }
+  .news {
+    padding: 12px 10px 15px;
+    position: relative;
+    z-index: 1; 
+  }
+  .news img {
+    width: 100%;
+    border-radius: 1px;
+    border: 3px solid white;
   }
   .new-product a {
     display: flex;
@@ -804,7 +816,6 @@ footer {
 /* Tablet */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   body {
-    background-color: #f0f0f0;
     font-size: 16px;
   }
   nav {
@@ -822,15 +833,20 @@ footer {
     text-decoration: none;
     color: black;
   }
-  .new-product {
-    width: calc(25% - 4px);
-    height: 300px;
+  .new-products{
+    height: 250px;
     border-radius: 5px;
     padding: 15px;
     background-color: #fff;
     margin: 2px;
     list-style: none;
   }
+  .new-product a {
+    text-decoration: none;
+    color: #000;
+    font-size: 12px;
+  }
+  
   .new-product a {
     display: flex;
     justify-content: space-between;
@@ -842,6 +858,25 @@ footer {
   .add-to-cart,
   .checkout {
     margin-bottom: 10px;
+  }
+  .banner {
+    padding: 64px 10px 15px;
+    position: relative;
+    z-index: 1;
+  }
+  .banner img {
+    width: 100%;
+    border-radius: 2%;
+  }
+  .news {
+    padding: 12px 10px 15px;
+    position: relative;
+    z-index: 1; 
+  }
+  .news img {
+    width: 100%;
+    border-radius: 1px;
+    border: 3px solid white;
   }
 }
 
@@ -907,15 +942,7 @@ footer {
   .banner-info a {
     margin: 8px;
   }
-  .banner .news {
-    display: block;
-    max-width: 33.33%;
-    padding: 0 0 8px 0;
-  }
-  .news ul {
-    background-color: #fff;
-    margin-top: 8px;
-  }
+
   .news li {
     list-style: none;
     padding: 7px 10px;
@@ -958,12 +985,9 @@ footer {
     background-color: #fff;
     margin: 2px;
     list-style: none;
-  }
-  .new-products {
-    min-height: 350px;
     align-items: flex-start;
   }
-  .product {
+   .product{
     width: calc(20% - 4px);
   }
   .drink-products {
@@ -971,7 +995,6 @@ footer {
   }
   .nav-line {
     width: auto;
-    margin-right: 15px;
   }
   footer {
     display: flex;
